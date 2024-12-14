@@ -1,0 +1,20 @@
+#homepage {
+    .icon-row {
+        width: 250px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .blurb {
+        font-family: "Helvetica Neue";
+        font-size: 18px;
+        min-width: 1280px;
+        max-width: 80vw;
+        text-align: start;
+    }
+}
