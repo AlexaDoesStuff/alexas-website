@@ -1,20 +1,59 @@
-#homepage {
+@import "../assets/fonts/fonts.scss";
+
+.homepage {
+    width: 85vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5em;
     .icon-row {
+        padding-top: 1.5em;
         width: 250px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 
     .blurb {
         font-family: "Helvetica Neue";
-        font-size: 18px;
-        min-width: 1280px;
-        max-width: 80vw;
+        font-size: 22px;
+        line-height: 1.3em;
         text-align: start;
     }
+
+    .gutter {
+        padding-top: 130px;
+    }
+
+    .title-name {
+        font-family: "Hedvig Normal";
+        font-size: 124px;
+    }
+
+    .last-name {
+        margin-top: -.6em;
+    }
+
+    .slideshow {
+        .subtitle {
+            font-family: "Helvetica Neue";
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+        }
+        img#jindaiji {
+            width: 440px;
+            height: 250px;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+@font-face {
+    font-family: "Hedvig Normal";
+    src: local("HedvigNormal"), url(../assets/fonts/HedvigNormal.ttf), format('ttf');
 }
