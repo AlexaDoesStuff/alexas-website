@@ -1,5 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 
+import PulseIcon from "../assets/animations/pulseIcon";
+
 import HomeIcon from "../assets/images/homeIcon.svg";
 import MeIcon from "../assets/images/meIcon.svg";
 import WorkIcon from "../assets/images/workIcon.svg";
@@ -12,10 +14,10 @@ const HomePage = () => {
   return (
     <div className={`homepage`}>
         <Row className="icon-row">
-          <img src={HomeIcon} className="icon"/>
-          <img src={MeIcon} className="icon"/>
+          <PulseIcon src={HomeIcon} />
+          <PulseIcon src={MeIcon} />
           <a href="https://www.linkedin.com/in/alexa-j-2590ba96/" target="__blank">
-            <img src={WorkIcon} className="icon"/>
+            <PulseIcon src={WorkIcon} />
           </a>
         </Row>
         
