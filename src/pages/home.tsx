@@ -27,7 +27,7 @@ const HomePage = () => {
 
         <Row className="blurb-row">
           <motion.div className="contents p-0 first">
-            Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with <br /> over 
+            Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with over 
             <strong className="keyword"> 4 years of experience</strong>. As a self-proclaimed  computer whiz, 
             I’m becoming a seasoned web guru specializing in full stack and frontend, continuously  developing 
             incredible things for incredible causes.          
@@ -40,8 +40,6 @@ const HomePage = () => {
             open to new opportunities and connection, aiming to build for the future.         
           </motion.div>
         </Row>
-
-        <div className="gutter"/>
 
         <motion.div
           initial={{ opacity: 0, y: "-50px" }} 
