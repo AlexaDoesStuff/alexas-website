@@ -6,7 +6,7 @@ import HomeIcon from "../assets/images/homeIcon.svg";
 import MeIcon from "../assets/images/meIcon.svg";
 import WorkIcon from "../assets/images/workIcon.svg";
 
-import jindaiji from "../assets/images/Jindaiji_FULL.png";
+import jindaiji from "../assets/images/jindaiji.png";
 
 import "./pages.scss";
 import { motion } from "motion/react";
@@ -56,9 +56,8 @@ const HomePage = () => {
           id="jindaiji"
           src={jindaiji}
           initial={{ opacity: 0, y: "-40px" }}
-          animate={{ opacity: 1, y: "0px" }} 
+          animate={{ opacity: .7, y: "0px" }} 
           transition={{ duration: 1.8, ease: "easeOut" }} 
-          className="jindaiji"
         />
     </div>
   )

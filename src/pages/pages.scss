@@ -4,15 +4,15 @@ div#firstpage {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
-    overflow-y: scroll;
 }
 
 .homepage {
     width: 88vw;
     height: 90dvh;
+    min-height: 700px;
     max-width: 1024px;
     position: relative;
+    overflow-y: scroll;
     .row {
         width: 100%;
         margin-left: unset;
@@ -21,9 +21,11 @@ div#firstpage {
     .contents {
         font-size: 18px;
         line-height: 28px;
+        z-index: 12;
     }
 
     .icon-row {
+        margin-top: 2em;
         width: 180px;
         display: flex;
         justify-content: space-between;
@@ -47,6 +49,7 @@ div#firstpage {
         flex-direction: column;
         position: absolute;
         bottom: 0;
+        z-index: 11;
     }
 
     .title-name {
@@ -66,8 +69,7 @@ div#firstpage {
         position: absolute;
         bottom: 125px;
         right: 10px;
-        opacity: 60%;
-        z-index: -10;
+        z-index: 10;
     }
 }
 
@@ -115,6 +117,10 @@ div#firstpage {
             }
         }
 
+        .icon-row {
+            margin-top: unset;
+        }
+
         .name-row {
             margin-bottom: 50px;
             bottom: 0;
@@ -127,7 +133,6 @@ div#firstpage {
             height: 280px;
             bottom: 250px;
             right: 40px;
-            opacity: 100%;
         }
     }
     
@@ -137,6 +142,11 @@ div#firstpage {
 }
 
 @media screen and (min-width: 1025px) {
+    div#firstpage {
+        min-height: 700px;
+        height: 100dvh;
+    }
+
     .homepage {
         height: 80vh;
         width: 70vw;
