@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import PulseIcon from "../assets/animations/pulseIcon";
 
@@ -9,6 +9,7 @@ import WorkIcon from "../assets/images/workIcon.svg";
 import jindaiji from "../assets/images/Jindaiji_FULL.png";
 
 import "./pages.scss";
+import { motion } from "motion/react";
 
 const HomePage = () => {
   return (
@@ -24,36 +25,43 @@ const HomePage = () => {
         {/* Gutter */}
         <div className="p-4"/>
 
-        <Row className="d-flex blurb">
-          <Col className="col-4 p-0">
-            Hello. I'm Alexa, a <strong>Front End Engineer</strong> with over <strong>4 years of experience</strong>. 
-            As a self-proclaimed  computer whiz, I’m becoming a seasoned web guru specializing 
-            in full stack and frontend, continuously  developing incredible things for incredible causes.          
-          </Col>
+        <Row className="blurb-row">
+          <motion.div className="contents p-0 first">
+            Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with <br /> over 
+            <strong className="keyword"> 4 years of experience</strong>. As a self-proclaimed  computer whiz, 
+            I’m becoming a seasoned web guru specializing in full stack and frontend, continuously  developing 
+            incredible things for incredible causes.          
+          </motion.div>
 
-          {/* Gutter */}
-          <div className="p-5"/>
+          <div className="gutter"/>
 
-          <Col className="col-4 p-0">
-            Currently, I’m working for <strong>Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
+          <motion.div className="contents p-0 second">
+            Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
             open to new opportunities and connection, aiming to build for the future.         
-          </Col>
+          </motion.div>
         </Row>
 
         <div className="gutter"/>
 
-        <Row className="slideshow">
-          <Col>
-            <Row className="title-name">Alexa</Row>
-            <Row className="title-name last-name">Javellana</Row>
-          </Col>
-          <Col>
-            <Row className="slideshow subtitle">
-              {/* Jindaiji Temple, 2020 */}
-            </Row>
-            <img src={jindaiji} id="jindaiji"/>
-          </Col>
-        </Row>
+        <motion.div
+          initial={{ opacity: 0, y: "-50px" }} 
+          animate={{ opacity: 1, y: "0px" }} 
+          transition={{ duration: 2, ease: "easeOut" }} 
+          className="name-row"
+        > 
+          <Row className="title-name">Alexa</Row>
+          <Row className="title-name last-name">Javellana</Row>
+        </motion.div>
+      
+
+        <motion.img
+          id="jindaiji"
+          src={jindaiji}
+          initial={{ opacity: 0, y: "-40px" }}
+          animate={{ opacity: 1, y: "0px" }} 
+          transition={{ duration: 1.8, ease: "easeOut" }} 
+          className="jindaiji"
+        />
     </div>
   )
 }

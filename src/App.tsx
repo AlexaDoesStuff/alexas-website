@@ -1,10 +1,10 @@
 import './App.css'
-import HomePage from './pages/home'
+import CustomLayout from './components/customLayout'
 
 function App() {
   return (
     <>
-      <HomePage />
+      <CustomLayout />
     </>
   )
 }
