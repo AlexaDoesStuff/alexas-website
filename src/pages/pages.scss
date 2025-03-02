@@ -12,7 +12,7 @@ div#firstpage {
     min-height: 700px;
     max-width: 1024px;
     position: relative;
-    overflow-y: scroll;
+    overflow-y: hidden;
     .row {
         width: 100%;
         margin-left: unset;
