@@ -11,7 +11,6 @@ div#firstpage {
 .homepage {
     width: 88vw;
     height: 90dvh;
-    min-height: 840px;
     max-width: 1024px;
     position: relative;
     .row {
@@ -44,6 +43,12 @@ div#firstpage {
         padding-top: 25px;
     }
 
+    .name-row {
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+    }
+
     .title-name {
         font-family: "Hedvig Normal";
         font-size: 83px;
@@ -63,13 +68,6 @@ div#firstpage {
         right: 10px;
         opacity: 60%;
         z-index: -10;
-    }
-
-    .name-row {
-        flex-direction: column;
-        position: absolute;
-        bottom: 0;
-        margin-top: 40px;
     }
 }
 
