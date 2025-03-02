@@ -4,12 +4,14 @@ div#firstpage {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
+    overflow-y: scroll;
 }
 
 .homepage {
     width: 88vw;
-    height: 90vh;
+    height: 90dvh;
+    min-height: 840px;
     max-width: 1024px;
     position: relative;
     .row {
@@ -34,7 +36,6 @@ div#firstpage {
 
     .blurb-row {
         flex-direction: column;
-        min-height: 500px;
         line-height: 30px;
         z-index: 20;
     }
@@ -53,14 +54,14 @@ div#firstpage {
     }
 
     img#jindaiji {
-        max-width: 450px;
+        max-width: 480px;
         max-height: 280px;
-        width: 70vw;
-        height: 45vw;
-        position: fixed;
-        bottom: 140px;
-        right: 40px;
-        opacity: 80%;
+        width: 50vw;
+        height: 30vw;
+        position: absolute;
+        bottom: 125px;
+        right: 10px;
+        opacity: 60%;
         z-index: -10;
     }
 
@@ -68,8 +69,7 @@ div#firstpage {
         flex-direction: column;
         position: absolute;
         bottom: 0;
-        left: 0;
-        margin-bottom: -40px;
+        margin-top: 40px;
     }
 }
 
@@ -119,11 +119,15 @@ div#firstpage {
 
         .name-row {
             margin-bottom: 50px;
+            bottom: 0;
+            left: 0;
+            margin-top: unset;
         }
 
         img#jindaiji {
             width: 450px;
             height: 280px;
+            bottom: 250px;
             right: 40px;
             opacity: 100%;
         }
@@ -138,10 +142,11 @@ div#firstpage {
     .homepage {
         height: 80vh;
         width: 70vw;
-        max-width: 1064px;
+        max-width: 1112px;
 
         .contents {
-            max-width: 532px;
+            max-width: 500px;
+            font-size: 24px;
             line-height: 32px;
         }
 
