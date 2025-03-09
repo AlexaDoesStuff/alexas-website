@@ -22,8 +22,8 @@ const PulseIcon: React.FC<Props> = ({src}) => (
         transition={{
             type: "spring", 
             stiffness: 100,
-            damping: 15,
-            duration: 1.8, 
+            damping: 20,
+            duration: 2, 
         }}
         style={{
             border: "none",
