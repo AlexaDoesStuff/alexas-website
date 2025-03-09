@@ -26,7 +26,11 @@ const HomePage = () => {
         <div className="p-4"/>
 
         <Row className="blurb-row">
-          <motion.div className="contents p-0 first">
+          <motion.div 
+            initial={{ opacity: 0, y: "30px" }} 
+            animate={{ opacity: 1, y: "0px" }} 
+            transition={{ duration: 2, ease: "easeOut" }} 
+            className="contents p-0 first">
             Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with over 
             <strong className="keyword"> 4 years of experience</strong>. A lover of all things visually 
             beautiful and harmoniously effective. Translates into all facets of my life, and definitely 
@@ -35,10 +39,22 @@ const HomePage = () => {
 
           <div className="gutter"/>
 
-          <motion.div className="contents p-0 second">
+          <motion.div 
+            initial={{ opacity: 0, y: "30px" }} 
+            animate={{ opacity: 1, y: "0px" }} 
+            transition={{ duration: 1.8, ease: "easeOut" }} 
+            className="contents p-0 second">
             Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
             open to new opportunities and connection, aiming to build for the future.         
           </motion.div>
+
+          <motion.img
+            id="jindaiji"
+            src={jindaiji}
+            initial={{ opacity: 0, y: "-40px" }}
+            animate={{ opacity: .7, y: "0px" }} 
+            transition={{ duration: 1.8, ease: "easeOut" }} 
+          />
         </Row>
 
         <motion.div
@@ -50,15 +66,6 @@ const HomePage = () => {
           <Row className="title-name">Alexa</Row>
           <Row className="title-name last-name">Javellana</Row>
         </motion.div>
-      
-
-        <motion.img
-          id="jindaiji"
-          src={jindaiji}
-          initial={{ opacity: 0, y: "-40px" }}
-          animate={{ opacity: .7, y: "0px" }} 
-          transition={{ duration: 1.8, ease: "easeOut" }} 
-        />
     </div>
   )
 }

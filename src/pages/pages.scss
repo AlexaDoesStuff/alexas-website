@@ -26,7 +26,7 @@ div#firstpage {
 
     .icon-row {
         margin-top: 2em;
-        width: 180px;
+        width: 200px;
         display: flex;
         justify-content: space-between;
         .icon {
@@ -64,12 +64,17 @@ div#firstpage {
     img#jindaiji {
         max-width: 480px;
         max-height: 280px;
-        width: 50vw;
-        height: 30vw;
+        width: 70vw;
+        /* bottom: 125px; */
+        /* right: 10px; */
         position: absolute;
-        bottom: 125px;
-        right: 10px;
+        right: 0;
+        bottom: 20vh;
         z-index: 10;
+    }
+
+    img#jindaiji:hover {
+        opacity: 1;
     }
 }
 
@@ -131,8 +136,7 @@ div#firstpage {
         img#jindaiji {
             width: 450px;
             height: 280px;
-            bottom: 250px;
-            right: 40px;
+            bottom: 15vh;
         }
     }
     
@@ -150,11 +154,11 @@ div#firstpage {
     .homepage {
         height: 80vh;
         width: 70vw;
-        max-width: 1112px;
+        max-width: 1032px;
 
         .contents {
-            max-width: 500px;
-            font-size: 24px;
+            max-width: 512px;
+            font-size: 22px;
             line-height: 32px;
         }
 
@@ -165,8 +169,7 @@ div#firstpage {
         img#jindaiji {
             flex-direction: column;
             position: absolute;
-            bottom: 140px;
-            right: 0px
+
         }
     }
 }
