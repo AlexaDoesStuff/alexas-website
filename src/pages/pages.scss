@@ -29,6 +29,7 @@ div#firstpage {
         width: 200px;
         display: flex;
         justify-content: space-between;
+        overflow-y: hidden;
         .icon {
             width: 32px;
             height: 32px;

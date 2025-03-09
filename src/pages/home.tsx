@@ -29,7 +29,7 @@ const HomePage = () => {
           <motion.div 
             initial={{ opacity: 0, y: "30px" }} 
             animate={{ opacity: 1, y: "0px" }} 
-            transition={{ duration: 2, ease: "easeOut" }} 
+            transition={{ duration: .8, ease: "easeOut" }} 
             className="contents p-0 first">
             Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with over 
             <strong className="keyword"> 4 years of experience</strong>. A lover of all things visually 
@@ -42,7 +42,7 @@ const HomePage = () => {
           <motion.div 
             initial={{ opacity: 0, y: "30px" }} 
             animate={{ opacity: 1, y: "0px" }} 
-            transition={{ duration: 1.8, ease: "easeOut" }} 
+            transition={{ duration: 1, ease: "easeOut" }} 
             className="contents p-0 second">
             Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
             open to new opportunities and connection, aiming to build for the future.         
@@ -53,14 +53,14 @@ const HomePage = () => {
             src={jindaiji}
             initial={{ opacity: 0, y: "-40px" }}
             animate={{ opacity: .7, y: "0px" }} 
-            transition={{ duration: 1.8, ease: "easeOut" }} 
+            transition={{ duration: 1, ease: "easeOut" }} 
           />
         </Row>
 
         <motion.div
           initial={{ opacity: 0, y: "-50px" }} 
           animate={{ opacity: 1, y: "0px" }} 
-          transition={{ duration: 2, ease: "easeOut" }} 
+          transition={{ duration: .8, ease: "easeOut" }} 
           className="name-row"
         > 
           <Row className="title-name">Alexa</Row>

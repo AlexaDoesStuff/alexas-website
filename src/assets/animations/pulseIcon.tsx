@@ -5,8 +5,8 @@ interface Props {
 }
 
 const variants = {
-    initial: { scale: 0 },
-    animate: { scale: 1 },
+    initial: { y: 50, opacity: 0 }, // Start 50px below its final position
+    animate: { y: 0, opacity: 1 },
     hover: { scale: 1.3 },
   };
 
@@ -20,7 +20,10 @@ const PulseIcon: React.FC<Props> = ({src}) => (
         animate="animate"
         whileHover="hover"
         transition={{
-          scale: { type: "spring", stiffness: 300, damping: 10 },
+            type: "spring", 
+            stiffness: 100,
+            damping: 15,
+            duration: 1.8, 
         }}
         style={{
             border: "none",
@@ -29,5 +32,4 @@ const PulseIcon: React.FC<Props> = ({src}) => (
     />
 )
 
-    
 export default PulseIcon;
