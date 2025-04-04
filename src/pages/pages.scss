@@ -146,6 +146,22 @@ div#firstpage {
     }    
 }
 
+.roadmap-page {
+    width: 100dvw;
+
+    img#roadmap-svg {
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: draw 2s linear forwards;
+      }
+      
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+}
+
 @media screen and (min-width: 1025px) {
     div#firstpage {
         min-height: 700px;

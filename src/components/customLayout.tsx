@@ -1,5 +1,4 @@
 import HomePage from "../pages/home";
-import AboutMePage from "../pages/about";
 
 const CustomLayout = () => {
 	return (
@@ -7,9 +6,9 @@ const CustomLayout = () => {
 			<div id="firstpage">
 				<HomePage />
 			</div>
-			<div id="secondpage">
-				<AboutMePage />
-			</div>
+			{/* <div id="secondpage">
+				<RoadmapPage />
+			</div> */}
 		</div>
 	)
 }
