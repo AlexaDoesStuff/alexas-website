@@ -6,9 +6,6 @@ const CustomLayout = () => {
 			<div id="firstpage">
 				<HomePage />
 			</div>
-			{/* <div id="secondpage">
-				<RoadmapPage />
-			</div> */}
 		</div>
 	)
 }

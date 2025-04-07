@@ -23,7 +23,7 @@ const PulseIcon: React.FC<Props> = ({src}) => (
             type: "spring", 
             stiffness: 100,
             damping: 30,
-            duration: 2, 
+            duration: 1.5, 
             delay: .2
         }}
         style={{

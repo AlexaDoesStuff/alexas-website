@@ -1,4 +1,4 @@
-import { Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import PulseIcon from "../assets/animations/pulseIcon";
 
@@ -7,10 +7,16 @@ import MeIcon from "../assets/images/meIcon.svg";
 import WorkIcon from "../assets/images/workIcon.svg";
 
 import jindaiji from "../assets/images/jindaiji.png";
+import arrowDown from "../assets/images/arrow_down.png";
 
 import "./pages.scss";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+
+const variants = {
+  initial: { y: 100, opacity: 0 }, 
+  animate: { y: 0, opacity: 1 },
+};
 
 const HomePage = () => {
   const [ready, setReady] = useState(false);
@@ -29,10 +35,55 @@ const HomePage = () => {
           </a>
         </Row>
         
-        {/* Gutter */}
         <div className="p-4"/>
 
-        <Row className="blurb-row">
+        <motion.div
+          initial={{ opacity: 0, y: "-45px" }} 
+          animate={ready ? { opacity: 1, y: "0px" } : {}}
+          transition={{ duration: 1, ease: "easeOut" }} 
+          className="name-row"
+        > 
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            transition={{
+                type: "spring", 
+                stiffness: 100,
+                damping: 30,
+                duration: 3, 
+                delay: .3
+            }}
+            className="title-name"
+          > 
+            Alexa
+          </motion.div>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            transition={{
+                type: "spring", 
+                stiffness: 100,
+                damping: 30,
+                duration: 3, 
+                delay: .5
+            }}
+            className="title-name last-name"
+          > 
+            Javellana
+          </motion.div>
+        </motion.div>
+
+        <Col className="blurb-col">
+          <motion.img
+            id="jindaiji"
+            src={jindaiji}
+            initial={{ opacity: 0, y: "-35px" }}
+            animate={ready ? { opacity: .85, y: "0px" } : {}}
+            transition={{ duration: 1.3, ease: "easeOut" }} 
+          />
+
           <motion.div 
             initial={{ opacity: 0, y: "-30px" }} 
             animate={ready ? { opacity: 1, y: "0px" } : {}}
@@ -44,7 +95,7 @@ const HomePage = () => {
             helps in my career, as I become a better engineer.
           </motion.div>
 
-          <div className="gutter"/>
+          <div className="p-4"/>
 
           <motion.div 
             initial={{ opacity: 0, y: "-30px" }} 
@@ -54,25 +105,16 @@ const HomePage = () => {
             Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
             open to new opportunities and connection, aiming to build for the future.         
           </motion.div>
+        </Col>
 
-          <motion.img
-            id="jindaiji"
-            src={jindaiji}
-            initial={{ opacity: 0, y: "-45px" }}
-            animate={ready ? { opacity: .7, y: "0px" } : {}}
-            transition={{ duration: 1, ease: "easeOut" }} 
-          />
-        </Row>
 
-        <motion.div
-          initial={{ opacity: 0, y: "-45px" }} 
-          animate={ready ? { opacity: 1, y: "0px" } : {}}
-          transition={{ duration: 1, ease: "easeOut" }} 
-          className="name-row"
-        > 
-          <Row className="title-name">Alexa</Row>
-          <Row className="title-name last-name">Javellana</Row>
-        </motion.div>
+        <motion.img
+          id="arrow-down"
+          src={arrowDown}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{delay: .8}}
+        />
     </div>
   )
 }
