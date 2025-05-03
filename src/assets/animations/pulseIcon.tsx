@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
 
-interface Props {
+type Props = {
   src: string;
-}
+  onClick?: () => void;
+};
 
 const variants = {
   initial: { y: 50, opacity: 0 }, // Start 50px below its final position
@@ -10,7 +11,7 @@ const variants = {
   hover: { scale: 1.3 },
 };
 
-const PulseIcon: React.FC<Props> = ({ src }) => (
+const PulseIcon: React.FC<Props> = ({ src, onClick }) => (
   <motion.img
     src={src}
     className="icon"
@@ -18,6 +19,7 @@ const PulseIcon: React.FC<Props> = ({ src }) => (
     initial="initial"
     animate="animate"
     whileHover="hover"
+    onClick={onClick}
     transition={{
       type: 'spring',
       stiffness: 100,

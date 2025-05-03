@@ -1,9 +1,12 @@
+$max-subway-stops: 8;
+
 .menu-row {
-  margin-top: 10px;
-  width: 100%;
+  width: 80dvw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: absolute;
+  top: 30px;
 }
 
 .icon-row {
@@ -14,5 +17,86 @@
   .icon {
     width: 32px;
     height: 32px;
+  }
+}
+
+div#roadmap {
+  position: relative;
+  width: 1020px;
+  #roadmap-svg {
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    animation: dash 5s linear forwards;
+    display: block;
+  }
+
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .roadmap-stop {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    border: 6px solid black;
+    opacity: 0;
+    transform: scale(0);
+
+    &.is-animated {
+      animation: popIn 0.5s ease-in forwards;
+    }
+  }
+
+  @for $i from 0 through $max-subway-stops - 1 {
+    .roadmap-stop.delayed-#{$i}.is-animated {
+      animation-delay: $i * 0.4s;
+    }
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  div#roadmap-stops {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-row {
+    position: unset;
+    margin-top: unset;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .menu-row {
+    width: 80dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .icon-row {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

@@ -12,24 +12,9 @@ div#rootpage {
   }
 }
 
-// .menu-row {
-//   margin-top: 10px;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-// }
-
-// .icon-row {
-//   width: 200px;
-//   display: flex;
-//   justify-content: space-between;
-//   overflow-y: hidden;
-//   .icon {
-//     width: 32px;
-//     height: 32px;
-//   }
-// }
+.page-transition-wrapper {
+  overflow: hidden;
+}
 
 div#firstpage {
   display: flex;
@@ -119,10 +104,6 @@ div#firstpage {
     #rootpage-content {
       height: 90dvh;
     }
-
-    .menu-row {
-      margin-top: unset;
-    }
   }
 
   .homepage {
@@ -186,24 +167,10 @@ div#firstpage {
 }
 
 .roadmap-page {
-  width: 100dvw;
-  height: 100dvh;
-  min-width: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .roadmap-svg {
-    width: 1020px;
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    animation: dash 10s linear forwards;
-  }
-
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
+  width: 90dvw;
+  max-width: 800px;
+  overflow: auto;
+  height: 70dvh;
 }
 
 @media screen and (min-width: 1025px) {
@@ -218,26 +185,19 @@ div#firstpage {
     }
   }
 
-  .menu-row {
-    width: 80dvw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .icon-row {
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-    overflow-y: hidden;
-    .icon {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
   div#firstpage {
     min-height: 700px;
+  }
+
+  .roadmap-page {
+    width: unset;
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+    .roadmap-svg {
+      width: 1020px;
+    }
   }
 
   .homepage {

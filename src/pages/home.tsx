@@ -26,7 +26,6 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <div className="p-4" />
-
       <motion.div
         initial={{ opacity: 0, y: '-45px' }}
         animate={ready ? { opacity: 1, y: '0px' } : {}}

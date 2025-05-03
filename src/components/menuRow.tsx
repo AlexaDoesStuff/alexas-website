@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import PulseIcon from '../assets/animations/pulseIcon';
 
 import HomeIcon from '../assets/images/homeIcon.svg';
@@ -7,17 +8,23 @@ import WorkIcon from '../assets/images/workIcon.svg';
 
 import { useLanguage } from '../contexts/language';
 
+import './components.scss';
 import '../pages/pages.scss';
 
 import { cn, Switch } from '@heroui/react';
 
 const MenuRow = () => {
   const { toggleLanguage } = useLanguage();
+  const navigate = useNavigate();
   return (
     <div className="menu-row">
       <div className="icon-row">
-        <PulseIcon src={HomeIcon} />
-        <PulseIcon src={MeIcon} />
+        <a onClick={() => navigate('/')}>
+          <PulseIcon src={HomeIcon} />
+        </a>
+        {/* <a onClick={() => navigate('/aboutme')}> */}
+          <PulseIcon src={MeIcon} />
+        {/* </a> */}
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"
           target="__blank"
