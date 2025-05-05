@@ -11,8 +11,10 @@ $max-subway-stops: 8;
 
 .icon-row {
   width: 172px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   overflow-y: hidden;
   .icon {
     width: 28px;

@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import PulseIcon from '../assets/animations/pulseIcon';
 
 import HomeIcon from '../assets/images/homeIcon.svg';
-import MeIcon from '../assets/images/meIcon.svg';
-import WorkIcon from '../assets/images/workIcon.svg';
+import WorkIcon from '../assets/images/work.svg';
+import MeIcon from '../assets/images/running.svg';
 
 import { useLanguage } from '../contexts/language';
 
@@ -28,6 +28,7 @@ const MenuRow = () => {
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"
           target="__blank"
+          style={{ width: "25px"}}
         >
           <PulseIcon src={WorkIcon} />
         </a>
