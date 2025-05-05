@@ -23,7 +23,7 @@ const MenuRow = () => {
           <PulseIcon src={HomeIcon} />
         </a>
         {/* <a onClick={() => navigate('/aboutme')}> */}
-          <PulseIcon src={MeIcon} />
+        <PulseIcon src={MeIcon} />
         {/* </a> */}
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"

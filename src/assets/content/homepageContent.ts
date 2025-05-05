@@ -18,13 +18,12 @@ export const homepageContent = {
       `
         こんにちは、<strong className='keyword'>アレクサ</strong>です。私のウェブサイトへようこそ。
         5年以上<strong className='keyword'>Front End Engineer</strong>として働いています。
-        私生活でも職場でも、「視覚美」と「機能的な調和」を重視しています。
+        生活でも職場でも、「視覚美」と「機能的な調和」を重視しています。
         キャリアが進むにつれて、その価値観は未来と現在のプロジェクトに反映できるよう、これからも努力していきます。
       `,
       `
-        現在、<strong className='keyword'>Amazon Prime Video</strong>でFront End Engineer として
-        <strong className='keyword'>3年ぐらいで働いています</strong>。
-        新しい機会やプロジェクト、人とのつながりに常にオープンです！
+        現在、<strong className='keyword'>Front End Engineer</strong>でAmazon Prime Videoに勤めています　（〜３年から始まり）。
+        新しい出会いやつながりにいつも前向きです！
       `,
     ],
   },

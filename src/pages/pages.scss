@@ -14,6 +14,8 @@ div#rootpage {
 
 .page-transition-wrapper {
   overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 div#firstpage {
@@ -26,12 +28,8 @@ div#firstpage {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90dvh;
-  min-height: 700px;
-  max-width: 1024px;
+  height: 100dvh;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
   .row {
     width: 100%;
     margin-left: unset;
@@ -40,12 +38,13 @@ div#firstpage {
   .homepage-contents {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 34px;
     z-index: 12;
   }
 
   .blurb-col {
+    margin-top: 40px;
     flex-direction: column;
     line-height: 30px;
     z-index: 1;
@@ -67,7 +66,7 @@ div#firstpage {
   .title-name {
     font-family: 'Helvetica Neue';
     font-weight: 600;
-    font-size: 72px;
+    font-size: 58px;
     z-index: 100;
     color: $name-fill-color;
     -webkit-text-stroke-color: $name-border-color;
@@ -79,14 +78,14 @@ div#firstpage {
   }
 
   img#jindaiji {
-    max-width: 480px;
-    max-height: 300px;
-    width: 60vw;
+    max-width: 460px;
+    max-height: 280px;
+    width: 50vw;
     position: absolute;
     bottom: 0;
-    margin-bottom: 50px;
     right: 0;
     z-index: -10;
+    margin-bottom: 12px;
   }
 
   img#arrow-down {
@@ -102,15 +101,16 @@ div#firstpage {
 @media screen and (min-width: 768px) {
   div#rootpage {
     #rootpage-content {
-      height: 90dvh;
+      height: 85dvh;
     }
   }
 
   .homepage {
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
 
     .blurb-col {
+      margin-top: 0;
       flex-direction: row;
       flex-wrap: nowrap;
       padding: unset;
@@ -123,7 +123,7 @@ div#firstpage {
 
     .title-name {
       color: $name-fill-color;
-      font-size: 113px;
+      font-size: 92px;
       -webkit-text-stroke-color: $name-border-color;
       -webkit-text-stroke-width: 3px;
       text-shadow: -5px 5px $name-border-color;
@@ -150,14 +150,9 @@ div#firstpage {
     }
 
     img#jindaiji {
-      width: 420px;
-      height: 260px;
+      max-width: 420px;
+      max-height: 260px;
       bottom: 0;
-      margin-bottom: 100px;
-    }
-
-    img#arrow-down {
-      margin-bottom: 35px;
     }
   }
 
@@ -185,6 +180,11 @@ div#firstpage {
     }
   }
 
+  div.page-transition-wrapper {
+    min-height: 724px;
+    max-height: 724px;
+  }
+
   div#firstpage {
     min-height: 700px;
   }
@@ -206,6 +206,10 @@ div#firstpage {
     width: 100%;
     max-width: 1620px;
 
+    .title-name {
+      font-size: 98px;
+    }
+
     .homepage-contents {
       width: 38dvw;
       min-width: 636px;
@@ -215,8 +219,8 @@ div#firstpage {
     }
 
     img#jindaiji {
-      width: 460px;
-      height: 290px;
+      max-width: 500px;
+      max-height: 290px;
     }
 
     img#arrow-down {

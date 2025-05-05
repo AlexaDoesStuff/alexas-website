@@ -87,7 +87,7 @@ const HomePage = () => {
           />
         </AnimatePresence>
 
-        <div className="p-4" />
+        <div className="p-3" />
 
         <AnimatePresence mode="wait">
           <motion.div
