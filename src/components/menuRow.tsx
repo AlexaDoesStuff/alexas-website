@@ -28,7 +28,7 @@ const MenuRow = () => {
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"
           target="__blank"
-          style={{ width: "25px"}}
+          style={{ width: '25px' }}
         >
           <PulseIcon src={WorkIcon} />
         </a>

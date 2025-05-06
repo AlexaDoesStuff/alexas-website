@@ -1,6 +1,7 @@
 $max-subway-stops: 8;
 
 .menu-row {
+  max-width: 1620px;
   width: 80dvw;
   display: flex;
   flex-direction: row;
@@ -17,8 +18,8 @@ $max-subway-stops: 8;
   align-items: center;
   overflow-y: hidden;
   .icon {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -80,8 +81,8 @@ div#roadmap {
   .icon-row {
     width: 200px;
     .icon {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
   }
 
@@ -100,13 +101,13 @@ div#roadmap {
   }
 
   .icon-row {
-    width: 200px;
+    width: 220px;
     display: flex;
     justify-content: space-between;
     overflow-y: hidden;
     .icon {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
