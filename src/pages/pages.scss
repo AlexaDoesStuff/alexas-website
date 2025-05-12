@@ -22,6 +22,14 @@ div#rootpage {
   margin-top: 20px;
 }
 
+.page-transition-wrapper.has-roadmap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
 div#firstpage {
   display: flex;
   align-items: center;
@@ -29,6 +37,7 @@ div#firstpage {
 }
 
 .homepage {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,8 +118,13 @@ div#firstpage {
     }
   }
 
+  .page-transition-wrapper.has-roadmap {
+    align-items: center;
+  }
+
   .homepage {
     height: 100%;
+    padding-top: 20px;
     margin: 0 auto;
 
     .blurb-col {
@@ -166,7 +180,7 @@ div#firstpage {
 }
 
 .roadmap-page {
-  width: 90dvw;
+  width: 80dvw;
   max-width: 800px;
   overflow: auto;
   height: 70dvh;
@@ -184,21 +198,12 @@ div#firstpage {
     }
   }
 
-  div.page-transition-wrapper {
-    min-height: 680px;
-    max-height: 70dvh;
-  }
-
   div#firstpage {
     min-height: 700px;
   }
 
   .roadmap-page {
-    width: unset;
-    max-width: unset;
-    display: flex;
-    justify-content: center;
-    padding-top: 65px;
+    max-width: 1080px;
     .roadmap-svg {
       width: 1020px;
     }

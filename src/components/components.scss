@@ -1,5 +1,41 @@
 $max-subway-stops: 8;
 
+/** ========= END ANIMATIONS ========= **/
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes greenPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/** ========= END ANIMATIONS ========= **/
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 .menu-row {
   max-width: 1620px;
   width: 80dvw;
@@ -23,25 +59,56 @@ $max-subway-stops: 8;
   }
 }
 
+#instructions {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  font-family: 'DM Sans';
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+#instructions.show {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: auto;
+}
+
+#instructions.hide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.stop-popover {
+  background-color: white;
+  border: 1px dashed black;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 350px;
+  max-width: 90dvw;
+  z-index: 10;
+  font-family: 'DM Sans';
+  font-size: 18px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 div#roadmap {
   position: relative;
-  width: 1020px;
+  width: 80dvw;
+  overflow-x: auto;
   #roadmap-svg {
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
     animation: dash 5s linear forwards;
     display: block;
-  }
-
-  @keyframes popIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
   }
 
   .roadmap-stop {
@@ -55,7 +122,18 @@ div#roadmap {
     transform: scale(0);
 
     &.is-animated {
-      animation: popIn 0.5s ease-in forwards;
+      animation-name: popIn;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+    }
+
+    &:nth-last-child(1) .stop-popover {
+      transform: translate(-97%, -100%);
+    }
+
+    &:nth-last-child(2) .stop-popover {
+      transform: translate(-50%, -90%);
     }
   }
 
@@ -65,11 +143,6 @@ div#roadmap {
     }
   }
 
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
   div#roadmap-stops {
     position: absolute;
     top: 0;

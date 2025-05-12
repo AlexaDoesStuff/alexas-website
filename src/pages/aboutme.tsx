@@ -3,15 +3,19 @@ import SubwayStops from '../components/subwayStops';
 
 import './pages.scss';
 import '../components/components.scss';
+import RoadmapInstructions from '../components/roadmapInstructions';
 
 const AboutMePage = () => {
   return (
-    <div className={`roadmap-page`} key={Date.now()}>
-      <div id="roadmap">
-        <Roadmap id="roadmap-svg" />
-        <SubwayStops svgId="roadmap-svg" />
+    <>
+      <RoadmapInstructions />
+      <div className={`roadmap-page`} key={Date.now()}>
+        <div id="roadmap">
+          <Roadmap id="roadmap-svg" />
+          <SubwayStops svgId="roadmap-svg" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
