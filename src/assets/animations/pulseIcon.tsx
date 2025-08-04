@@ -6,9 +6,8 @@ type Props = {
 };
 
 const variants = {
-  initial: { y: 50, opacity: 0 }, // Start 50px below its final position
+  initial: { y: 50, opacity: 0 },
   animate: { y: 0, opacity: 1 },
-  hover: { scale: 1.3 },
 };
 
 const PulseIcon: React.FC<Props> = ({ src, onClick }) => (
@@ -18,7 +17,7 @@ const PulseIcon: React.FC<Props> = ({ src, onClick }) => (
     variants={variants}
     initial="initial"
     animate="animate"
-    whileHover="hover"
+    layout="position"
     onClick={onClick}
     transition={{
       type: 'spring',

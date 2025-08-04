@@ -1,7 +1,7 @@
 export const roadmapContent = {
   en: {
     instructions: [
-      `Hover over each stop to learn more about my personal and professional journey `,
+      `Hover over each stop to learn more about my personal and professional journey! `,
     ],
     stopContent: [
       `Born in Elmhurst, NYC to a Filipino Chinese household`,

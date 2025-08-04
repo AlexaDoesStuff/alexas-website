@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PulseIcon from '../assets/animations/pulseIcon';
 
 import HomeIcon from '../assets/images/homeIcon.svg';
-import WorkIcon from '../assets/images/work.svg';
+import LinkedIn from '../assets/images/linkedin.svg'
 import MeIcon from '../assets/images/running.svg';
 
 import { useLanguage } from '../contexts/language';
@@ -25,12 +25,14 @@ const MenuRow = () => {
         <a onClick={() => navigate('/aboutme')}>
           <PulseIcon src={MeIcon} />
         </a>
+        {/* <a onClick={() => navigate('/aboutme')}>
+          <PulseIcon src={WorkIcon} />
+        </a> */}
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"
           target="__blank"
-          style={{ width: '25px' }}
         >
-          <PulseIcon src={WorkIcon} />
+          <PulseIcon src={LinkedIn} />
         </a>
       </div>
       <motion.div

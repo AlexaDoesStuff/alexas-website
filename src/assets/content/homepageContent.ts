@@ -8,8 +8,9 @@ export const homepageContent = {
         helps in my career, as I become a better engineer.
       `,
       `
-        Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. Always 
-        open to new opportunities and connection, aiming to build for the future.    
+        Previously at <strong className="keyword">Liferay Tokyo, IBM, and Disney's Marvel Entertainment</strong>.
+        Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. 
+        Always open to new opportunities and connection, aiming to build for the future.    
       `,
     ],
   },

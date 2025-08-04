@@ -48,7 +48,7 @@ $max-subway-stops: 8;
 
 .icon-row {
   width: 172px;
-  height: 40px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@ $max-subway-stops: 8;
   top: 45%;
   left: 50%;
   transform: translate(-45%, -50%);
-  font-family: 'DM Sans';
+  font-family: 'DM Mono';
   width: 80%;
   max-width: 600px;
   text-align: center;
@@ -95,8 +95,8 @@ $max-subway-stops: 8;
   min-width: 350px;
   max-width: 90dvw;
   z-index: 10;
-  font-family: 'DM Sans';
-  font-size: 18px;
+  font-family: 'DM Mono';
+  font-size: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -174,13 +174,13 @@ div#roadmap {
   }
 
   .icon-row {
-    width: 220px;
+    width: 260px;
     display: flex;
     justify-content: space-between;
     overflow-y: hidden;
     .icon {
-      width: 30px;
-      height: 30px;
+      width: 26px;
+      height: 26px;
     }
   }
 }
