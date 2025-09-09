@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { Col } from 'react-bootstrap';
 
 import jindaiji from '../assets/images/jindaiji.png';
-import arrowDown from '../assets/images/arrow_down.png';
 
 import './pages.scss';
 import { homepageContent } from '../assets/content/homepageContent';
@@ -102,14 +101,6 @@ const HomePage = () => {
           />
         </AnimatePresence>
       </Col>
-
-      <motion.img
-        id="arrow-down"
-        src={arrowDown}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8 }}
-      />
     </div>
   );
 };

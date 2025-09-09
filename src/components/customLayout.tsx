@@ -8,6 +8,7 @@ import '../pages/pages.scss';
 import { AnimatePresence } from 'framer-motion';
 
 import { PageTransitionExitOnlyWrapper } from '../pages/pageTransitionWrapper';
+import PortfolioPage from '../pages/portfolio';
 
 const CustomLayout = () => {
   const location = useLocation();
@@ -30,6 +31,14 @@ const CustomLayout = () => {
               element={
                 <PageTransitionExitOnlyWrapper keyName={location.pathname}>
                   <AboutMePage />
+                </PageTransitionExitOnlyWrapper>
+              }
+            />
+            <Route
+              path="portfolio"
+              element={
+                <PageTransitionExitOnlyWrapper keyName={location.pathname}>
+                  <PortfolioPage />
                 </PageTransitionExitOnlyWrapper>
               }
             />

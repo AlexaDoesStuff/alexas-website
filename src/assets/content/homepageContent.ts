@@ -2,10 +2,10 @@ export const homepageContent = {
   en: {
     intro: [
       `
-        Hello. I'm Alexa, a <strong className="keyword">Front End Engineer</strong> with over 
-        <strong className="keyword"> 5 years of experience</strong>. A lover of all things visually 
-        beautiful and harmoniously effective. Translates into all facets of my life, and definitely 
-        helps in my career, as I become a better engineer.
+        Hello. I'm Alexa, a <strong className="keyword">Digital Creative</strong>, with over 
+        <strong className="keyword">6 years of professional experience</strong> as a
+        <strong className="keyword">Front End Engineer</strong>. A lover of all things visually beautiful and harmoniously effective. 
+        Translates into all facets of my life, and definitely helps in my career, as I become a better engineer.
       `,
       `
         Previously at <strong className="keyword">Liferay Tokyo, IBM, and Disney's Marvel Entertainment</strong>.
@@ -17,7 +17,7 @@ export const homepageContent = {
   jp: {
     intro: [
       `
-        こんにちは、<strong className='keyword'>アレクサ</strong>です。私のウェブサイトへようこそ。
+        こんにちは、<strong className='keyword'>アレクサ</strong>です。私のウェブサイトへようこそ！
         5年以上<strong className='keyword'>Front End Engineer</strong>として働いています。
         生活でも職場でも、「視覚美」と「機能的な調和」を重視しています。
         キャリアが進むにつれて、その価値観は未来と現在のプロジェクトに反映できるよう、これからも努力していきます。
