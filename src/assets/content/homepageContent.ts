@@ -5,11 +5,12 @@ export const homepageContent = {
         Hello. I'm Alexa, a <strong className="keyword">Digital Creative</strong>, with over 
         <strong className="keyword">6 years of professional experience</strong> as a
         <strong className="keyword">Front End Engineer</strong>. A lover of all things visually beautiful and harmoniously effective. 
-        Translates into all facets of my life, and definitely helps in my career, as I become a better engineer.
+        Translates into all facets of my life, through reality and screens alike.
       `,
       `
         Previously at <strong className="keyword">Liferay Tokyo, IBM, and Disney's Marvel Entertainment</strong>.
-        Currently, I’m working for <strong className="keyword">Amazon, Prime Video</strong> as a Front End Software Engineer. 
+        My most recent working experience was for <strong className="keyword">Amazon, Prime Video</strong> 
+        as a Front End Software Engineer, where I worked for over 3 and half years.
         Always open to new opportunities and connection, aiming to build for the future.    
       `,
     ],

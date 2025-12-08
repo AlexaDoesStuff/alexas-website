@@ -19,23 +19,6 @@ const MenuRow = () => {
   const navigate = useNavigate();
   return (
     <div className="menu-row">
-      <div className="icon-row">
-        <a onClick={() => navigate('/')}>
-          <PulseIcon src={HomeIcon} />
-        </a>
-        <a onClick={() => navigate('/aboutme')}>
-          <PulseIcon src={MeIcon} />
-        </a>
-        <a onClick={() => navigate('/portfolio')}>
-          <PulseIcon src={WorkIcon} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/alexa-j-2590ba96/"
-          target="__blank"
-        >
-          <PulseIcon src={LinkedIn} />
-        </a>
-      </div>
       <motion.div
         id="languageToggle"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -44,6 +27,7 @@ const MenuRow = () => {
       >
         <Switch
           color="default"
+          disabled={true}
           onChange={toggleLanguage}
           endContent={<div className="languageToggle_label"> EN </div>}
           size="lg"
@@ -61,6 +45,23 @@ const MenuRow = () => {
           }}
         />
       </motion.div>
+      <div className="icon-row">
+        <a onClick={() => navigate('/')}>
+          <PulseIcon src={HomeIcon} />
+        </a>
+        <a onClick={() => navigate('/')}>
+          <PulseIcon src={MeIcon} />
+        </a>
+        <a onClick={() => navigate('/')}>
+          <PulseIcon src={WorkIcon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alexa-j-2590ba96/"
+          target="__blank"
+        >
+          <PulseIcon src={LinkedIn} />
+        </a>
+      </div>
     </div>
   );
 };
