@@ -21,7 +21,7 @@ const CustomLayout = () => {
             style={{
               height: 1,
               width: "100%",
-              background: "#e3e3e3",
+              background: "#000",
               transformOrigin: "50% 50%",
               position: "absolute",
               bottom: "0"

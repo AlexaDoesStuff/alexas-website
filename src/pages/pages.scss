@@ -1,10 +1,6 @@
 $name-fill-color: #11cf00;
 $name-border-color: black;
 
-#body-text {
-  font-family: 'Crimson Text';
-}
-
 div#rootpage {
   height: 100dvh;
   display: flex;
@@ -23,15 +19,6 @@ div#rootpage {
 .page-transition-wrapper {
   height: 96%;
   width: 100%;
-  margin-top: 20px;
-}
-
-.page-transition-wrapper.has-roadmap {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 20px;
 }
 
 div#firstpage {
@@ -44,57 +31,46 @@ div#firstpage {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 94dvw;
   position: relative;
+  padding-top: 70px;
+  overflow-x: hidden;
+  margin: 0 auto;
   .name-row {
     letter-spacing: -9px;
-    line-height: 124px;
-    overflow-y: hidden;
-    font-family: 'Inter', sans-serif;
-    font-size: 148px;
+    line-height: 85px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 112px;
     font-weight: bold;
-  }
-  .homepage-bottom {
-    overflow-x: hidden;
-    position: absolute;
-    bottom: 10dvh;
-    display: flex;
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    letter-spacing: -1px;
-    line-height: 38px;
+    transform: scaleX(1.8);   /* wider horizontally */
+    transform-origin: left center;
   }
   .blurb {
     text-align: right;
   }
+  .homepage-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Helvectiva", sans-serif;
+    position: absolute;
+    bottom: 0;
+    height: 45dvh;
+    justify-content: space-between;
+    font-size: 30px;
+    line-height: 28px;
+  }
 }
 
 @media screen and (min-width: 768px) {
- 
   .homepage {
-    height: 100%;
-    padding-top: 20px;
-    margin: 0 auto;
-  }
-
-  .aboutmepage {
-    margin: 3em;
+    .name-row {
+      font-size: 124px;
+      line-height: 95px;
+    }
   }
 }
 
-.roadmap-page {
-  width: 80dvw;
-  max-width: 800px;
-  overflow: auto;
-  height: 70dvh;
-}
-
-.portfolio-page {
-  width: 50dvw;
-  height: 90dvh;
-  position: relative;
-}
-
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   div#rootpage {
     display: flex;
     flex-direction: column;
@@ -114,48 +90,50 @@ div#firstpage {
   }
 
   .homepage {
-    margin-top: 20px;
+    height: 100%;
+    width: 93%;
+
+    .name-row {
+      letter-spacing: -9px;
+      line-height: 143px;
+      font-size: 188px;
+      font-weight: bold;
+    }
+
+    .homepage-bottom {
+      width: 100%;
+      overflow-x: hidden;
+      position: absolute;
+      bottom: 5dvh;
+      justify-content: space-between;
+      flex-direction: row;
+      font-size: 40px;
+      letter-spacing: -1px;
+      line-height: 44px;
+      height: unset;
+    }
+
+    .blurb {
+      width: 824px;
+    }
+  }
+
+  .aboutme-page {
     height: 100%;
     width: 100%;
-    max-width: 1620px;
 
-    .title-name {
-      font-size: 102px;
+    .about-display {
+      font-family: "Bebas Neue", sans-serif;
+      transform: scaleX(1.8);
+      transform-origin: left center;
+      line-height: 122px;
+      font-size: 148px;
     }
 
-    .homepage-contents {
-      width: 38dvw;
-      min-width: 636px;
-      max-width: 800px;
-      font-size: 21px;
-      line-height: 34px;
+    #contents {
+      width: 100%;
+      height: 100%;
     }
 
-    img#jindaiji {
-      max-width: 440px;
-      max-height: 260px;
-    }
-
-    img#arrow-down {
-      width: 60px;
-      height: 60px;
-    }
-  }
-
-  .portfolio-page {
-    width: 75dvw;
-    height: 60dvh;
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .homepage {
-    img#jindaiji {
-      flex-direction: column;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
   }
 }

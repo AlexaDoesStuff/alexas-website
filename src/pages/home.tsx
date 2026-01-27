@@ -1,12 +1,22 @@
 import { motion } from 'motion/react';
 
-import { Col } from 'react-bootstrap';
-
 import { riseUpTextVariant, leftToRightTextVariant, rightToLeftTextVariant } from '../assets/animations/motionVariants';
 
 import './pages.scss';
 
 const HomePage = () => {
+  // function returnWrapStyleSentences(sentences: ['']) {
+  //   if(sentences.length > 0) {
+  //     sentences.map((sentence) => {
+  //       return (
+  //         <>
+  //           {sentence}
+  //         </>
+  //       )
+  //     })
+  //   }
+  // }
+
   return (
     <div className="homepage">
       <div className="name-row">
@@ -45,7 +55,7 @@ const HomePage = () => {
       </div>
 
       <div className="homepage-bottom">
-        <Col>
+        <div>
           <motion.div 
           variants={leftToRightTextVariant}
           initial="initial"
@@ -57,8 +67,9 @@ const HomePage = () => {
             damping: 30,
             duration: 2,
             delay: 0.2,
-          }}>ajavellana123@gmail.com</motion.div></Col>
-        <Col className='blurb'>
+          }}>ajavellana123@gmail.com</motion.div>
+        </div>
+        <div className='blurb'>
           <motion.div 
             variants={rightToLeftTextVariant}
             initial="initial"
@@ -70,12 +81,12 @@ const HomePage = () => {
               damping: 30,
               duration: 2,
               delay: 0.2,
-            }}>
+            }}>              
               Hello! I`m a Software Engineer and Digital Consultant based out of 
-              New York. Or, I might be in Los Angeles and Tokyo! I`ve worked for 
-              Amazon, Disney, IBM and more ー Let`s connect!   
+              New York. I travel often and speak Japanese, with ability to work JST and PST timezones. 
+              I`ve worked for Amazon, Disney, IBM and more ー Let`s connect.  
             </motion.div>
-        </Col>
+        </div>
       </div>
     </div>
   );

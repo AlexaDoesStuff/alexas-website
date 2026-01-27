@@ -1,12 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import '@heroui/theme/dist/styles.css';
+@import '@fontsource/bebas-neue';
 @import '@fontsource/inter';
+@import 'tailwindcss';
 
 :root {
-  font-family: "Inter", system-ui, "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Bebas Neue", system-ui, "Avenir", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

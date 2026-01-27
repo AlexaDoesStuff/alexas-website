@@ -19,9 +19,7 @@ export default defineConfig([
   {
     ignores: [
       'dist/',
-      'tailwind.config.js',
       '.eslintrc.js',
-      'postcss.config.js',
     ],
   },
   {
