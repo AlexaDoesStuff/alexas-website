@@ -5,6 +5,7 @@ export enum VariantType {
   RISE_UP = 'RISE_UP',
   LEFT_RIGHT = 'LEFT_RIGHT',
   RIGHT_LEFT = 'RIGHT_LEFT',
+  RISE_UP_L = 'RISE_UP_L',
 }
 
 export const pageExitVariant = {
@@ -20,19 +21,25 @@ export const riseUpTextVariant = {
   animate: { y: 0, opacity: 1 },
 };
 
+export const riseUpLargeTextVariant = {
+  initial: { y: 600, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
+
 export const leftToRightTextVariant = {
   initial: { x: -500, opacity: 0 },
   animate: { x: 0, opacity: 1 },
 };
 
 export const rightToLeftTextVariant = {
-  initial: { x: 500, opacity: 0 },
+  initial: { x: 600, opacity: 0 },
   animate: { x: 0, opacity: 1 },
 };
 
 const variantMap: Record<VariantType, Variants> = {
   [VariantType.PAGE_EXIT]: pageExitVariant,
   [VariantType.RISE_UP]: riseUpTextVariant,
+  [VariantType.RISE_UP_L]: riseUpLargeTextVariant,
   [VariantType.LEFT_RIGHT]: leftToRightTextVariant,
   [VariantType.RIGHT_LEFT]: rightToLeftTextVariant,
 };
