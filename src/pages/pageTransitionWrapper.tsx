@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ReactNode, useEffect, useState } from 'react';
-import { pageExitVariant } from '../assets/animations/motionVariants';
 import { useLocation } from 'react-router-dom';
 
 type PageTransitionWrapperProps = {
@@ -26,7 +25,6 @@ export const PageTransitionExitOnlyWrapper: React.FC<
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit="exit"
-      variants={pageExitVariant}
       className={wrapperClass}
     >
       {children}

@@ -12,7 +12,6 @@ $max-subway-stops: 8;
   }
 }
 
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -45,7 +44,7 @@ $max-subway-stops: 8;
 
 #responsive-header-row {
   width: 100dvw;
-  height: 96px;
+  height: 132px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,117 +54,30 @@ $max-subway-stops: 8;
 }
 
 .menu-row {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   position: absolute;
   align-items: center;
-  height: 100%
+  height: 100%;
 }
 
-.icon-row {
-  width: 164px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow-y: hidden;
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-#instructions {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-45%, -50%);
-  font-family: 'DM Mono';
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-
-#instructions.show {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-  pointer-events: auto;
-}
-
-#instructions.hide {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  pointer-events: none;
-}
-
-.stop-popover {
-  background-color: white;
-  border: 1px dashed black;
-  border-radius: 5px;
-  padding: 10px;
-  min-width: 350px;
-  max-width: 90dvw;
-  z-index: 10;
-  font-family: 'DM Mono';
-  font-size: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-div#roadmap {
-  position: relative;
-  width: 80dvw;
-  overflow-x: auto;
-  #roadmap-svg {
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    animation: dash 5s linear forwards;
-    display: block;
-  }
-
-  .roadmap-stop {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: white;
-    border: 6px solid black;
-    opacity: 0;
-    transform: scale(0);
-
-    &.is-animated {
-      animation-name: popIn;
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in;
-    }
-
-    &:nth-last-child(1) .stop-popover {
-      transform: translate(-97%, -100%);
-    }
-
-    &:nth-last-child(2) .stop-popover {
-      transform: translate(-50%, -90%);
-    }
-  }
-
-  @for $i from 0 through $max-subway-stops - 1 {
-    .roadmap-stop.delayed-#{$i}.is-animated {
-      animation-delay: $i * 0.4s;
-    }
-  }
-
-  div#roadmap-stops {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.portfolio-video {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 @media screen and (min-width: 768px) {
@@ -179,15 +91,11 @@ div#roadmap {
   .menu-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 96%;
+    width: 93.5%;
+    justify-content: end;
   }
-
-  .icon-row {
-    width: 242px;
-    display: flex;
-    justify-content: space-between;
-    overflow-y: hidden;
+  #responsive-header-row {
+    height: 162px;
   }
 }
 

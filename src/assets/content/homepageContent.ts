@@ -3,9 +3,9 @@ export const homepageContent = {
     intro: [
       `Hello! I'm a Software Engineer and Digital`,
       `Consultant based out of New York. I'm often in`,
-      `Tokyo and Los Angeles as well. I've worked for`, 
+      `Tokyo and Los Angeles as well. I've worked for`,
       `Amazon, Disney, IBM and more `,
-      `ー Let's connect.`
+      `ー Let's connect.`,
     ],
   },
   jp: {

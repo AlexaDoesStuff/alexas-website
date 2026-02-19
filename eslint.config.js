@@ -17,10 +17,7 @@ export default defineConfig([
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
-    ignores: [
-      'dist/',
-      '.eslintrc.js',
-    ],
+    ignores: ['dist/', '.eslintrc.js'],
   },
   {
     rules: {

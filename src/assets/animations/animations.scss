@@ -1,0 +1,49 @@
+.icon-wrapper {
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.icon-row {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+  align-items: flex-start;
+  height: 40px;
+  .icon {
+    width: 45px;
+    height: 45px;
+    backface-visibility: hidden;
+  }
+  .icon.active {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.2s;
+  }
+  .icon.hover {
+    animation: fadeUpOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .icon-row {
+    width: 383px;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpOut {
+  to {
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+}

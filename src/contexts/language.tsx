@@ -13,7 +13,9 @@ interface LanguageProviderProps {
 
 export const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export const LanguageProvider = ({ children }: LanguageProviderProps): JSX.Element => {
+export const LanguageProvider = ({
+  children,
+}: LanguageProviderProps): JSX.Element => {
   const [language, setLanguage] = useState<Language>('en');
 
   const toggleLanguage = () => {

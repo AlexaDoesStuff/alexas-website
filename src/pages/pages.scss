@@ -17,7 +17,7 @@ div#rootpage {
 }
 
 .page-transition-wrapper {
-  height: 96%;
+  height: 100%;
   width: 100%;
 }
 
@@ -31,18 +31,18 @@ div#firstpage {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 94dvw;
+  width: 92dvw;
   position: relative;
-  padding-top: 70px;
+  padding-top: 40px;
   overflow-x: hidden;
   margin: 0 auto;
   .name-row {
     letter-spacing: -9px;
-    line-height: 85px;
+    line-height: 96px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 112px;
+    font-size: 128px;
     font-weight: bold;
-    transform: scaleX(1.8);   /* wider horizontally */
+    transform: scaleX(1.56);
     transform-origin: left center;
   }
   .blurb {
@@ -51,21 +51,89 @@ div#firstpage {
   .homepage-bottom {
     display: flex;
     flex-direction: column-reverse;
-    font-family: "Helvectiva", sans-serif;
+    font-family: 'Helvectiva', sans-serif;
     position: absolute;
     bottom: 0;
-    height: 45dvh;
+    height: 40dvh;
     justify-content: space-between;
-    font-size: 30px;
-    line-height: 28px;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.aboutme-page {
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f0f0f0 5.5%,
+    #d0d0d0 13%,
+    #808080 27.5%,
+    #404040 43%,
+    #000000 69%
+  );
+
+  .about-display {
+    width: 90%;
+    line-height: 64px;
+    font-size: 92px;
+    color: #fff;
+    div {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: -6px;
+      transform: scaleX(0.7); /* Scale ONLY text horizontally */
+      transform-origin: left center;
+      white-space: nowrap;
+      paint-order: stroke fill;
+    }
+  }
+  .contents-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 98dvw;
+    position: absolute;
+    bottom: 80px;
+  }
+  .secondary-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 152px;
+    width: 90%;
+    color: #fff;
+    div {
+      letter-spacing: -7px;
+      transform: scaleX(0.355);
+      line-height: 45px;
+      // transform-origin: left center;
+      white-space: nowrap;
+      paint-order: stroke fill;
+      -webkit-text-stroke: 2px #fff;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .homepage {
+    .homepage-bottom {
+      font-size: 32px;
+      height: 32dvh;
+    }
     .name-row {
-      font-size: 124px;
-      line-height: 95px;
+      font-size: 134px;
+      line-height: 104px;
+    }
+  }
+
+  .aboutme-page {
+    .secondary-title {
+      font-size: 198px;
     }
   }
 }
@@ -90,13 +158,13 @@ div#firstpage {
   }
 
   .homepage {
-    height: 100%;
-    width: 93%;
+    height: 96%;
+    width: 92%;
 
     .name-row {
       letter-spacing: -9px;
-      line-height: 143px;
-      font-size: 188px;
+      line-height: 133px;
+      font-size: 178px;
       font-weight: bold;
     }
 
@@ -104,12 +172,11 @@ div#firstpage {
       width: 100%;
       overflow-x: hidden;
       position: absolute;
-      bottom: 5dvh;
       justify-content: space-between;
       flex-direction: row;
-      font-size: 40px;
+      font-size: 32px;
       letter-spacing: -1px;
-      line-height: 44px;
+      line-height: 35px;
       height: unset;
     }
 
@@ -121,19 +188,71 @@ div#firstpage {
   .aboutme-page {
     height: 100%;
     width: 100%;
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #f0f0f0 5.5%,
+      #d0d0d0 13%,
+      #808080 27.5%,
+      #404040 43%,
+      #000000 69%
+    );
 
     .about-display {
-      font-family: "Bebas Neue", sans-serif;
-      transform: scaleX(1.8);
-      transform-origin: left center;
-      line-height: 122px;
-      font-size: 148px;
+      width: 90%;
+      line-height: 97px;
+      font-size: 128px;
+      color: #fff;
+      div {
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: -6px;
+        transform: scaleX(0.7); /* Scale ONLY text horizontally */
+        transform-origin: left center;
+        white-space: nowrap;
+        paint-order: stroke fill;
+      }
     }
 
     #contents {
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .contents-left {
+        width: 50%;
+      }
+      .contents-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          padding-top: 92px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        #block {
+          background-color: black;
+          width: 90%;
+          height: 346px;
+          margin-top: -5px;
+        }
+      }
     }
+    .secondary-title {
+      font-size: 305px;
+      width: 100%;
+      position: absolute;
+      div {
+        margin-left: -60px;
+      }
+    }
+  }
 
+  .media {
+    max-width: 772px;
+    position: unset;
   }
 }
