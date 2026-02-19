@@ -12,8 +12,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/bebas-neue": "^5.2.7",
-    "@fontsource/inter": "^5.2.8",
     "@heroui/react": "^2.8.7",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.21",
