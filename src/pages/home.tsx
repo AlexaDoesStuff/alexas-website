@@ -62,8 +62,8 @@ const HomePage = () => {
               delay: 0.2,
             }}
           >
-            {`Hello! I'm a Software Engineer and Digital Consultant based out of 
-              New York. I travel often and speak Japanese, with ability to work JST and PST timezones. 
+            {`Hello! I'm a Web Developer, Designer and Digital Consultant based out of 
+              New York. I travel often and speak English and Japanese, with ability to work JST and PST timezones. 
               I've worked for Amazon, Disney, IBM and more ー Let's connect. `}
           </motion.div>
         </div>
