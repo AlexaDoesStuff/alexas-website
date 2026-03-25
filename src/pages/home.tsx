@@ -62,9 +62,9 @@ const HomePage = () => {
               delay: 0.2,
             }}
           >
-            {`Hello! I'm a Web Developer, Designer and Digital Consultant based out of 
+            {`Hello! I'm a Front End Engineer and Digital Design and Development Consultant based out of 
               New York. I travel often and speak English and Japanese, with ability to work JST and PST timezones. 
-              I've worked for Amazon, Disney, IBM and more ー Let's connect. `}
+              An expert on bringing ideas to life in the digital world - Let's connect!`}
           </motion.div>
         </div>
       </div>
