@@ -4,7 +4,7 @@ import '../components/components.scss';
 import portfolioVideo from '../assets/videos/portfoliovideo_warped.mov';
 import { StylizedMediaPlayer } from '../components/stylizedMediaPlayer';
 
-import portfolioPDF from '../assets/content/AlexaJ_Digital Portfolio.pdf';
+import portfolioPDF from '../assets/content/A4 - Alexa J Portfolio.pdf';
 
 const AboutMeAlternativePage = () => {
   return (
