@@ -1,8 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import HomePage from '../pages/home';
-import AboutMePage from '../pages/aboutme';
-import AboutMeAlternativePage from '../pages/aboutme2';
+import PortfolioInternalPage from '../pages/internalportfolio';
 
 import MenuRow from './menuRow';
 
@@ -11,22 +10,6 @@ import { AnimatePresence } from 'framer-motion';
 
 import { PageTransitionExitOnlyWrapper } from '../pages/pageTransitionWrapper';
 import PortfolioPage from '../pages/portfolio';
-
-// const keepBorder = (
-//   <motion.div
-//   style={{
-//     height: 1,
-//     width: '100%',
-//     background: '#000',
-//     transformOrigin: '50% 50%',
-//     position: 'absolute',
-//     bottom: '0',
-//   }}
-//   initial={{ scaleX: 0 }}
-//   animate={{ scaleX: 1 }}
-//   transition={{ duration: 1, ease: 'easeOut' }}
-// />
-// )
 
 const CustomLayout = () => {
   const location = useLocation();
@@ -47,18 +30,10 @@ const CustomLayout = () => {
               }
             />
             <Route
-              path="aboutme"
+              path="internal-portfolio"
               element={
                 <PageTransitionExitOnlyWrapper keyName={location.pathname}>
-                  <AboutMePage />
-                </PageTransitionExitOnlyWrapper>
-              }
-            />
-            <Route
-              path="aboutmealt"
-              element={
-                <PageTransitionExitOnlyWrapper keyName={location.pathname}>
-                  <AboutMeAlternativePage />
+                  <PortfolioInternalPage />
                 </PageTransitionExitOnlyWrapper>
               }
             />

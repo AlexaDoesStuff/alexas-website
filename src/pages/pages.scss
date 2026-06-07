@@ -1,3 +1,5 @@
+@import url('https://googleapis.com');
+
 $name-fill-color: #11cf00;
 $name-border-color: black;
 
@@ -97,6 +99,14 @@ div#firstpage {
     justify-content: center;
   }
 
+  #contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+  }
+
   .media {
     display: flex;
     flex-direction: column;
@@ -123,6 +133,34 @@ div#firstpage {
       -webkit-text-stroke: 2px #fff;
     }
   }
+
+  #portfolio-contents {
+    position: relative;
+    max-width: 1200px;
+    width: 90dvw;
+    height: 70dvh;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #bottom-title {
+    font-family: 'BIZ UDMincho', serif;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    bottom: 10px;
+    letter-spacing: -6px;
+    -webkit-text-stroke: 2px white;
+    opacity: 0.38;
+    width: 100%;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -146,6 +184,9 @@ div#firstpage {
   }
 
   .aboutme-page {
+    #portfolio-contents {
+      max-height: 680px;
+    }
     .secondary-title {
       font-size: 148px;
       display: flex;
@@ -155,6 +196,11 @@ div#firstpage {
       a {
         color: white;
       }
+    }
+    #bottom-title {
+      font-size: 48px;
+      letter-spacing: -11px;
+      -webkit-text-stroke: 2px white;
     }
   }
 }
@@ -281,6 +327,12 @@ div#firstpage {
 
     .media {
       bottom: unset;
+    }
+
+    #bottom-title {
+      font-size: 64px;
+      letter-spacing: -14px;
+      -webkit-text-stroke: 3px white;
     }
   }
 }

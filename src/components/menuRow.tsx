@@ -22,7 +22,7 @@ const MenuRow = () => {
         <a onClick={() => navigate('/')}>
           <PulseIcon src={HomeIcon} />
         </a>
-        <a onClick={() => navigate('/aboutmealt')}>
+        <a onClick={() => navigate('/internal-portfolio')}>
           <PulseIcon src={MeIcon} />
         </a>
         {/* <a onClick={() => navigate('/')}>

@@ -47,3 +47,9 @@
     transform: translateY(-45px);
   }
 }
+
+@keyframes revealUp {
+  to {
+    transform: scaleY(1);
+  }
+}

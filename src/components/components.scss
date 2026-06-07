@@ -1,4 +1,4 @@
-$max-subway-stops: 8;
+@import '../assets/animations/animations.scss';
 
 /** ========= START ANIMATIONS ========= **/
 @keyframes popIn {
@@ -9,12 +9,6 @@ $max-subway-stops: 8;
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
@@ -80,7 +74,182 @@ $max-subway-stops: 8;
   );
 }
 
+.portfolio-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .portfolio-icon {
+    width: 150px;
+    height: 150px;
+    background-color: lightgrey;
+  }
+  .portfolio-button {
+    font-family: 'BIZ UDMincho', serif;
+    -webkit-text-stroke: 1.4px black;
+    font-size: 18px;
+    background-color: lightgrey;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    filter: drop-shadow(1px 1px 0px #000);
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    letter-spacing: -1px;
+    padding: unset;
+  }
+  .portfolio-button:hover {
+    background-color: darkgray;
+  }
+}
+
+.portfolio-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.portfolio-window-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+
+  &.show {
+    background: rgba(0, 0, 0, 0.75);
+    animation: revealUp 0.5s ease forwards;
+
+    z-index: 80;
+  }
+}
+
+.portfolio-item-window-container {
+  position: fixed;
+  inset: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hide {
+    display: none;
+  }
+}
+
+.portfolio-item-window {
+  font-family: 'DotGothic16', sans-serif;
+
+  max-width: 90dvw;
+  height: 660px;
+  z-index: 100;
+  width: 1200px;
+
+  filter: drop-shadow(2px 2px 1px black);
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  background-color: lightgrey;
+
+  animation: popIn 0.5s ease forwards;
+
+  &.hide {
+    display: none;
+  }
+
+  #portfolio-window-topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background: linear-gradient(to right, #2a0014, #ffffff);
+
+    color: #fff;
+    font-size: 14px;
+  }
+
+  #portfolio-window-close {
+    background-color: lightgrey;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    filter: drop-shadow(1px 1px 0px #000);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    height: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  #portfolio-window-menu {
+    border-bottom: 1px solid gray;
+    height: 30px;
+    border-left: 1px solid white;
+    filter: drop-shadow(1px 0.5px 0.8px #000);
+    background-color: lightgray;
+    border-top: 1px solid white;
+
+    #menu-item {
+      padding-right: 15px;
+    }
+  }
+}
+
+#portfolio-window-folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  #folder-container {
+    width: 98%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    #folder-tab-button {
+      font-size: 16px;
+      background: lightgray;
+      border-bottom: 1px solid lightgray;
+      border-top: 1px solid white;
+      border-left: 1px solid white;
+      border-right: 1px solid black;
+      width: 160px;
+    }
+    #folder-content {
+      width: 100%;
+      height: 86%;
+      background-color: lightgray;
+      border-top: 1px solid white;
+      border-left: 1px solid white;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      filter: drop-shadow(1px 0.5px 0.8px #000);
+    }
+    #folder-content::before {
+      content: '';
+      top: 0;
+      left: 160px;
+      border-top: 1px solid lightgray;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .portfolio-item-window {
+    #portfolio-window-topbar {
+      font-size: 18px;
+    }
+  }
   .menu-row {
     position: unset;
     margin-top: unset;
