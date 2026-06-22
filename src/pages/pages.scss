@@ -39,12 +39,12 @@ div#firstpage {
   overflow-x: hidden;
   margin: 0 auto;
   .name-row {
-    letter-spacing: -9px;
+    letter-spacing: -8px;
     line-height: 70px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 92px;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-size: 80px;
     font-weight: bold;
-    transform: scaleX(1.56);
+    transform: scaleX(1.26);
     transform-origin: left center;
   }
   .blurb {
@@ -53,13 +53,13 @@ div#firstpage {
   .homepage-bottom {
     display: flex;
     flex-direction: column-reverse;
-    font-family: Helvectiva, sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     position: absolute;
     bottom: 0;
     height: 40%;
     justify-content: space-between;
-    font-size: 24px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 23px;
     margin-bottom: 32px;
   }
   div.homepage-bottom > div.blurb > div {
@@ -147,13 +147,12 @@ div#firstpage {
   }
 
   #bottom-title {
-    font-family: 'BIZ UDMincho', serif;
+    font-family: 'Inconsolata', serif;
     color: white;
+    letter-spacing: -3px;
     font-size: 28px;
     position: absolute;
     bottom: 10px;
-    letter-spacing: -6px;
-    -webkit-text-stroke: 2px white;
     opacity: 0.38;
     width: 100%;
     text-align: center;
@@ -171,8 +170,8 @@ div#firstpage {
       width: 100%;
     }
     .name-row {
-      font-size: 134px;
-      line-height: 104px;
+      font-size: 112px;
+      line-height: 92px;
     }
     .blurb {
       line-height: 30px;
@@ -200,7 +199,6 @@ div#firstpage {
     #bottom-title {
       font-size: 48px;
       letter-spacing: -11px;
-      -webkit-text-stroke: 2px white;
     }
   }
 }
@@ -229,9 +227,8 @@ div#firstpage {
     width: 92%;
 
     .name-row {
-      letter-spacing: -9px;
-      line-height: 133px;
-      font-size: 178px;
+      line-height: 123px;
+      font-size: 138px;
       font-weight: bold;
     }
 
@@ -241,14 +238,14 @@ div#firstpage {
       position: absolute;
       justify-content: space-between;
       flex-direction: row;
-      font-size: 32px;
+      font-size: 34px;
       letter-spacing: -1px;
-      line-height: 35px;
       height: unset;
     }
 
     .blurb {
       width: 824px;
+      line-height: 32px;
     }
   }
 
@@ -331,8 +328,6 @@ div#firstpage {
 
     #bottom-title {
       font-size: 64px;
-      letter-spacing: -14px;
-      -webkit-text-stroke: 3px white;
     }
   }
 }

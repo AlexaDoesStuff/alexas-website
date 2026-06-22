@@ -79,29 +79,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 205px;
+  height: 155px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .portfolio-icon {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-color: lightgrey;
   }
   .portfolio-button {
-    font-family: 'BIZ UDMincho', serif;
-    -webkit-text-stroke: 1.4px black;
-    font-size: 18px;
+    font-family: 'DotGothic16', serif;
+    font-size: 13px;
     background-color: lightgrey;
     border-top: 2px solid white;
     border-left: 2px solid white;
     filter: drop-shadow(1px 1px 0px #000);
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
-    width: 150px;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     letter-spacing: -1px;
     padding: unset;
+
+    -webkit-text-stroke: 0.3px black;
   }
   .portfolio-button:hover {
     background-color: darkgray;
@@ -219,13 +220,18 @@
     #folder-tab-button {
       font-size: 16px;
       background: lightgray;
-      border-bottom: 1px solid lightgray;
+      border-bottom: 5px solid lightgray;
       border-top: 1px solid white;
       border-left: 1px solid white;
       border-right: 1px solid black;
+
       width: 160px;
+
+      position: absolute;
+      z-index: 100;
     }
     #folder-content {
+      margin-top: 45px;
       width: 100%;
       height: 86%;
       background-color: lightgray;
@@ -253,6 +259,20 @@
   .menu-row {
     position: unset;
     margin-top: unset;
+  }
+
+  .portfolio-icon-container {
+    height: 205px;
+    .portfolio-icon {
+      width: 150px;
+      height: 150px;
+    }
+    .portfolio-button {
+      width: 150px;
+      height: 40px;
+      font-size: 18px;
+      -webkit-text-stroke: 0.5px black;
+    }
   }
 }
 
