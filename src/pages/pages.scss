@@ -32,7 +32,7 @@ div#firstpage {
 .homepage {
   display: flex;
   flex-direction: column;
-  height: 98%;
+  height: 100%;
   width: 92dvw;
   position: relative;
   padding-top: 40px;
@@ -40,9 +40,9 @@ div#firstpage {
   margin: 0 auto;
   .name-row {
     letter-spacing: -8px;
-    line-height: 53px;
+    line-height: 70px;
     font-family: 'IBM Plex Sans JP', sans-serif;
-    font-size: 62px;
+    font-size: 80px;
     font-weight: bold;
     transform: scaleX(1.26);
     transform-origin: left center;
@@ -56,11 +56,11 @@ div#firstpage {
     font-family: 'Inconsolata', sans-serif;
     position: absolute;
     bottom: 0;
-    height: 45%;
+    height: 40%;
     justify-content: space-between;
-    font-size: 23px;
+    font-size: 28px;
     line-height: 23px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
   div.homepage-bottom > div.blurb > div {
     max-width: 712px;
@@ -150,7 +150,7 @@ div#firstpage {
     font-family: 'Inconsolata', serif;
     color: white;
     letter-spacing: -3px;
-    font-size: 24px;
+    font-size: 28px;
     position: absolute;
     bottom: 10px;
     opacity: 0.38;
@@ -164,7 +164,6 @@ div#firstpage {
 
 @media screen and (min-width: 768px) {
   .homepage {
-    height: 100%;
     .homepage-bottom {
       font-size: 32px;
       height: 32dvh;
@@ -228,9 +227,10 @@ div#firstpage {
     width: 92%;
 
     .name-row {
-      line-height: 123px;
-      font-size: 138px;
+      line-height: 109px;
+      font-size: 132px;
       font-weight: bold;
+      letter-spacing: -13px;
     }
 
     .homepage-bottom {

@@ -11,8 +11,8 @@
   align-items: flex-start;
   height: 40px;
   .icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     backface-visibility: hidden;
   }
   .icon.active {
@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 1025px) {
   .icon-row {
-    width: 383px;
+    width: 423px;
     display: flex;
     justify-content: space-between;
     overflow-y: hidden;
@@ -48,7 +48,10 @@
   }
 }
 
-@keyframes revealUp {
+@keyframes revealDown {
+  from {
+    transform: scaleY(0);
+  }
   to {
     transform: scaleY(1);
   }

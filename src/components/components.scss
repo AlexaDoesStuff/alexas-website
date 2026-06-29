@@ -124,11 +124,11 @@
   left: 0;
 
   transform: scaleY(0);
-  transform-origin: bottom;
+  transform-origin: top;
 
   &.show {
     background: rgba(0, 0, 0, 0.75);
-    animation: revealUp 0.5s ease forwards;
+    animation: revealDown 0.5s ease forwards;
 
     z-index: 80;
   }
@@ -155,7 +155,7 @@
   max-width: 90dvw;
   height: 660px;
   z-index: 100;
-  width: 1200px;
+  width: 920px;
 
   filter: drop-shadow(2px 2px 1px black);
   border-left: 2px solid #fff;

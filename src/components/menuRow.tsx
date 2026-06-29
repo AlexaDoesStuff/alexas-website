@@ -4,6 +4,7 @@ import PulseIcon from '../assets/animations/pulseIcon';
 import HomeIcon from '../assets/images/homeIcon.svg';
 import LinkedIn from '../assets/images/linkedin.svg';
 import MeIcon from '../assets/images/running.svg';
+import PaperIcon from '../assets/images/paperIcon.svg';
 
 // import { useLanguage } from '../contexts/language';
 
@@ -25,9 +26,9 @@ const MenuRow = () => {
         <a onClick={() => navigate('/internal-portfolio')}>
           <PulseIcon src={MeIcon} />
         </a>
-        {/* <a onClick={() => navigate('/')}>
-          <PulseIcon src={WorkIcon} />
-        </a> */}
+        <a onClick={() => window.open('https://readymag.website/u916251294/6417721/', '_blank')}>
+          <PulseIcon src={PaperIcon} />
+        </a>
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"
           target="__blank"
