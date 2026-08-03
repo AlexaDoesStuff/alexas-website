@@ -6,6 +6,8 @@ import LinkedIn from '../assets/images/linkedin.svg';
 import MeIcon from '../assets/images/running.svg';
 import PaperIcon from '../assets/images/paperIcon.svg';
 
+import portfolioPDF from '../assets/content/New Portfolio_ Alexa Javellana.pdf';
+
 // import { useLanguage } from '../contexts/language';
 
 import './components.scss';
@@ -26,7 +28,7 @@ const MenuRow = () => {
         <a onClick={() => navigate('/internal-portfolio')}>
           <PulseIcon src={MeIcon} />
         </a>
-        <a onClick={() => window.open('https://readymag.website/u916251294/6417721/', '_blank')}>
+        <a href={portfolioPDF} download={'AlexaJ_Portfolio.pdf'}>
           <PulseIcon src={PaperIcon} />
         </a>
         <a
