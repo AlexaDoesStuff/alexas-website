@@ -1,7 +1,7 @@
 import './pages.scss';
 import '../components/components.scss';
 
-import portfolioVideo from '../assets/videos/portfoliovideo_warped.mov';
+import portfolioVideo from '../assets/videos/portfoliovideo.mp4';
 import { StylizedMediaPlayer } from '../components/stylizedMediaPlayer';
 
 import portfolioPDF from '../assets/content/New Portfolio_ Alexa Javellana.pdf';
