@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import './components.scss';
 
+import { WindowContent } from '../../public/content/windowContent';
+
 type Props = {
   buttonCTA: string;
   icon?: string;
   title?: string;
+  description?: string;
+  data?: WindowContent;
 };
 
-function PortfolioItem({ buttonCTA, icon, title }: Props) {
+function PortfolioItem({ buttonCTA, icon, title, data }: Props) {
   const [showWindow, setShowWindow] = useState(false);
   return (
     <>
@@ -53,7 +57,18 @@ function PortfolioItem({ buttonCTA, icon, title }: Props) {
           <div id="portfolio-window-folder">
             <div id="folder-container">
               <button id="folder-tab-button">About the Work</button>
-              <div id="folder-content"></div>
+              <div id="folder-content">
+                <div id="top">
+                  <div id="portfolio-carousel">!!! IMAGES HERE !!!</div>
+                </div>
+                <div id="btm">
+                  <div id="portfolio-description">
+                    {data?.description
+                      ? data.description
+                      : 'Coming soon, the juicy details...'}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import '../components/components.scss';
 import portfolioVideo from '../assets/videos/portfoliovideo.mp4';
 import { StylizedMediaPlayer } from '../components/stylizedMediaPlayer';
 
-import portfolioPDF from '../assets/content/New Portfolio_ Alexa Javellana.pdf';
+import portfolioPDF from '../../public/content/New Portfolio_ Alexa Javellana.pdf';
 import PortfolioItem from '../components/portfolioItem';
 
 import amazonIcon from '../assets/images/amazon prime logo.png';
@@ -13,6 +13,8 @@ import ibmIcon from '../assets/images/ibm_icon.png';
 import marvelIcon from '../assets/images/marvel.png';
 import jsIcon from '../assets/images/jsociety.png';
 import commerceIcon from '../assets/images/ecommerce.png';
+
+import { windowContentData } from '../../public/content/windowContent';
 
 const PortfolioInternalPage = () => {
   return (
@@ -25,16 +27,19 @@ const PortfolioInternalPage = () => {
                 buttonCTA="AMAZON PRIME VIDEO"
                 icon={amazonIcon}
                 title="Four Years@Amazon Prime Video"
+                data={windowContentData.amazon}
               />
               <PortfolioItem
                 buttonCTA="TOKYO CONSULTING"
                 icon={tokyoIcon}
                 title="Working in A COVID Time: Tokyo Edition"
+                data={windowContentData.liferay}
               />
               <PortfolioItem
                 buttonCTA="WORK@IBM"
                 icon={ibmIcon}
                 title="Beep Boop at IBM"
+                data={windowContentData.ibm}
               />
             </div>
             <div className="portfolio-row">
@@ -42,6 +47,7 @@ const PortfolioInternalPage = () => {
                 buttonCTA="WORK@DISNEY"
                 icon={marvelIcon}
                 title="Avengers Assemble: Front End at Marvel"
+                data={windowContentData.marvel}
               />
               <PortfolioItem
                 buttonCTA="NON-PROFIT"

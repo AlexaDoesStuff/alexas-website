@@ -6,7 +6,7 @@ import LinkedIn from '../assets/images/linkedin.svg';
 import MeIcon from '../assets/images/running.svg';
 import PaperIcon from '../assets/images/paperIcon.svg';
 
-import portfolioPDF from '../assets/content/New Portfolio_ Alexa Javellana.pdf';
+import portfolioPDF from '../../public/content/New Portfolio_ Alexa Javellana.pdf';
 
 // import { useLanguage } from '../contexts/language';
 
