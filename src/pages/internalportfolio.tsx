@@ -4,7 +4,7 @@ import '../components/components.scss';
 import portfolioVideo from '../assets/videos/portfoliovideo.mp4';
 import { StylizedMediaPlayer } from '../components/stylizedMediaPlayer';
 
-import portfolioPDF from '../../public/content/New Portfolio_ Alexa Javellana.pdf';
+import resume from '../../public/content/Alexa Javellana Resume 2026.pdf';
 import PortfolioItem from '../components/portfolioItem';
 
 import amazonIcon from '../assets/images/amazon prime logo.png';
@@ -66,8 +66,8 @@ const PortfolioInternalPage = () => {
           </div>
         </div>
         <div id="bottom-title">
-          <a href={portfolioPDF} download={'AlexaJ_Portfolio.pdf'}>
-            *click here to download my full portfolio
+          <a href={resume} download={'Alexa Javellana Resume 2026.pdf'}>
+            *click here to download my latest resume
           </a>
         </div>
       </div>
