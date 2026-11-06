@@ -5,6 +5,7 @@ import './animations.scss';
 
 type Props = {
   src: string;
+  isSmall?: boolean;
 };
 
 const variants = {
@@ -48,7 +49,7 @@ const PulseIcon: React.FC<Props> = ({ src }) => {
           className={`icon ${hasHover ? `hover` : ``}`}
           onMouseEnter={() => setHasHover(true)}
           style={{
-            transform: `translateY(${0})`,
+            transform: `translateY(${0})`
           }}
         />
       </div>

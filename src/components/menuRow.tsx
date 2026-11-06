@@ -4,7 +4,7 @@ import PulseIcon from '../assets/animations/pulseIcon';
 import HomeIcon from '../assets/images/homeIcon.svg';
 import LinkedIn from '../assets/images/linkedin.svg';
 import MeIcon from '../assets/images/running.svg';
-import PaperIcon from '../assets/images/paperIcon.svg';
+import WorkIcon from '../assets/images/work.svg'
 
 import portfolioPDF from '../../public/content/New Portfolio_ Alexa Javellana.pdf';
 
@@ -28,8 +28,8 @@ const MenuRow = () => {
         <a onClick={() => navigate('/internal-portfolio')}>
           <PulseIcon src={MeIcon} />
         </a>
-        <a href={portfolioPDF} download={'AlexaJ_Portfolio.pdf'}>
-          <PulseIcon src={PaperIcon} />
+        <a onClick={() => navigate('/downloads')}>
+          <PulseIcon src={WorkIcon} />
         </a>
         <a
           href="https://www.linkedin.com/in/alexa-j-2590ba96/"

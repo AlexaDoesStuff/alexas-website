@@ -18,7 +18,7 @@ const HomePage = () => {
           classString="name"
           variantType={VariantType.RISE_UP}
         >
-          ALEXA
+          Alexa
         </MotionVariantAnimation>
       </div>
       <div className="name-row">
@@ -26,7 +26,7 @@ const HomePage = () => {
           classString="name"
           variantType={VariantType.RISE_UP}
         >
-          JAVELLANA
+          Javellana
         </MotionVariantAnimation>
       </div>
 

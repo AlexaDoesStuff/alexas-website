@@ -9,7 +9,7 @@ import '../pages/pages.scss';
 import { AnimatePresence } from 'framer-motion';
 
 import { PageTransitionExitOnlyWrapper } from '../pages/pageTransitionWrapper';
-import PortfolioPage from '../pages/portfolio';
+import PortfolioPage from '../pages/downloads';
 
 const CustomLayout = () => {
   const location = useLocation();
